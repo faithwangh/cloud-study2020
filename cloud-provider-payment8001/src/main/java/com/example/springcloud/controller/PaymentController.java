@@ -4,11 +4,9 @@ import com.example.springcloud.entities.CommentResult;
 import com.example.springcloud.entities.Payment;
 import com.example.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.Objects;
 
 @RestController
 @Slf4j
