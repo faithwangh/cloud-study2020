@@ -23,5 +23,12 @@ https://spring.io/projects/spring-cloud/
 spring版本的兼容的说明
 https://start.spring.io/actuator/info
 
-##### 项目说明
+#####记录的问题
 
+- @Resource 和 @Autowired 都可以自动的创建实体bean,区别是什么？？
+-  
+- 
+-
+- 
+- 
+- 

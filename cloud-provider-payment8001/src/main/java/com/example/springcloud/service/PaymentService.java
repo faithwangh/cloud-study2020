@@ -2,6 +2,8 @@ package com.example.springcloud.service;
 
 import com.example.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
+
 
 public interface PaymentService {
 

@@ -4,10 +4,8 @@ import com.example.springcloud.entities.CommentResult;
 import com.example.springcloud.entities.Payment;
 import com.example.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Objects;
@@ -20,7 +18,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment")
-    public CommentResult create(Payment payment) {
+    public CommentResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("****插入结果：" + result);
 
@@ -31,7 +29,7 @@ public class PaymentController {
         }
     }
 
-    @GetMapping("/payment/{id}")
+    @GetMapping("/payment/get/{id}")
     public CommentResult getPaymentById(@PathVariable("id") Long id){
 
         Payment payment = paymentService.getPaymentById(id);
