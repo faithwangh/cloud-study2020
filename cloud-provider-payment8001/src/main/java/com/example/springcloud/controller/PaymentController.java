@@ -17,7 +17,7 @@ public class PaymentController {
     @Resource
     private PaymentService paymentService;
 
-    @PostMapping("/payment")
+    @PostMapping("/payment/create")
     public CommentResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
         log.info("****插入结果：" + result);
